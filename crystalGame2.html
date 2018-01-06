@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>crystal game</title>
+  </head>
+  <body>
+
+
+
+
+
+
+
+
+<img id="yellow" src="http://files.softicons.com/download/object-icons/free-crystal-icons-by-aha-soft/png/256x256/Zircon.png"></img>
+
+
+<img id="blue" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaDTcekX4Wb-TizZAA4tsixpw9lK4eUkAzICpRJ5CugswBBB88Gw"></img>
+
+<img id="red" src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMIcZbm-TjCmIzZT0OJsBNvyS-ooJitpSV6bnnhJzGDgpTPXVYtA"></img>
+
+<img id="green" src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwhnN5J4XRo8qyDqM7Kd_1FUU6smpybfu3Ma0rMcfslFyQ0Q2_"></img>
+
+<h4 id="wins">wins: </h4>
+<h4 id="losses">losses: </h4>
+<h3 id="total">total: </h3>
+
+</body>
+
+<script type="text/javascript">
+	var wins = 0;
+	var losses = 0;
+
+	var numbers = [77, 89, 112];
+	var startNumber = 0;
+	var guess = [];
+
+	
+	
+
+	startNumber=0;
+	numberToGuess = numbers[Math.floor(Math.random() * numbers.length)];
+	console.log(numberToGuess);
+
+
+	var yellow = document.querySelector("#yellow");
+
+	yellow.addEventListener("click", function(){
+		console.log('picked yellow');
+		startNumber = startNumber + 12;
+		guess = startNumber;
+		console.log(guess);
+		document.querySelector("#total").innerHTML = guess;
+
+	if (guess > numberToGuess){
+		alert("you lose");
+		losses++;
+		document.querySelector("#losses").innerHTML = "losses: " + losses;
+		
+		
+	}
+	if (guess == numberToGuess){
+		alert("you win");
+		wins++;
+		document.querySelector("#wins").innerHTML = "wins: " + wins;
+		
+	}
+
+	});
+
+
+
+	
+	var blue = document.querySelector("#blue");
+
+	blue.addEventListener("click", function(){
+		console.log('picked blue');
+		startNumber = startNumber + 3;
+		guess = startNumber;
+		console.log(guess);
+		document.querySelector("#total").innerHTML = guess;
+
+	if (guess > numberToGuess){
+		alert("you lose");
+		losses++;
+		document.querySelector("#losses").innerHTML = "losses: " + losses;
+		
+		
+	}
+	if (guess == numberToGuess){
+		alert("you win");
+		wins++;
+		document.querySelector("#wins").innerHTML = "wins: " + wins;
+		
+	}
+
+	});
+
+	var red = document.querySelector("#red");
+
+	red.addEventListener("click", function(){
+		console.log('picked red');
+		startNumber = startNumber + 7;
+		guess = startNumber;
+		console.log(guess);
+		document.querySelector("#total").innerHTML = guess;
+
+	if (guess > numberToGuess){
+		alert("you lose");
+		losses++;
+		document.querySelector("#losses").innerHTML = "losses: " + losses;
+		
+		
+	}
+	if (guess == numberToGuess){
+		alert("you win");
+		wins++;
+		document.querySelector("#wins").innerHTML = "wins: " + wins;
+		
+	}
+	});
+
+
+	var green = document.querySelector("#green");
+
+	green.addEventListener("click", function(){
+		console.log('picked green');
+		startNumber = startNumber + 2;
+		guess = startNumber;
+		console.log(guess);
+		document.querySelector("#total").innerHTML = guess;
+
+	if (guess > numberToGuess){
+		alert("you lose");
+		losses++;
+		document.querySelector("#losses").innerHTML = "losses: " + losses;
+
+		
+		
+	}
+	if (guess == numberToGuess){
+		alert("you win");
+		wins++;
+		document.querySelector("#wins").innerHTML = "wins: " + wins;
+		
+	}
+	});
+	
+	
+	
+	/*if (guess == numberToGuess){
+		alert("you win");
+		wins++;
+		document.querySelector("#wins").innerHTML = wins;
+		
+	}
+	if (guess > numberToGuess){
+		alert("you lose");
+		losses++;
+		document.querySelector("#losses").innerHTML = losses;
+		
+	}*/
+	
+	console.log('wins:' + wins);
+	console.log("startNumber:" + startNumber);
+	console.log("number to guess:" + numberToGuess);
+
+
+	
+</script>
+</html>
